@@ -5,16 +5,16 @@ const {
   renderLista,
   renderFormNueva,
   renderFormEditar,
-  obtener, // Obtener todas
-  obtener, // Obtener un única reserva
+  obtenert, // Obtener todas
+  obtenerr, // Obtener un única
   crear,
   actualizar,
   eliminar,
-} = require("../controllers/controllers");
+} = require("../controller/controller.js");
 
 router.get("/", renderLista);
 
-/// Formulario para crear una reserva
+/// Formulario para crear
 router.get("/crear", renderFormNueva);
 
 // ==========================================
@@ -22,7 +22,7 @@ router.get("/crear", renderFormNueva);
 // ==========================================
 
 // Obtener todas las trabajo
-router.get("/api", obtener);
+router.get("/api", obtenert);
 
 // Crear
 router.post("/api", crear);

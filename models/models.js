@@ -8,7 +8,7 @@ const trabajo = sequelize.define(
       primaryKey: true,
       autoIncrement: true,
     },
-    codigo: {
+    img: {
       type: DataTypes.STRING(100),
       allowNull: false,
       unique: true,
@@ -20,30 +20,6 @@ const trabajo = sequelize.define(
     apellido: {
       type: DataTypes.STRING(100),
       allowNull: false,
-    },
-    fecha_ingreso: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    fecha_salida: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    cantidad_personas: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    telefono: {
-      type: DataTypes.STRING(100),
-      allowNull: false,
-    },
-    email: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-    },
-    estado: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: true,
     },
     createdAt: {
       type: DataTypes.DATE,

@@ -5,7 +5,7 @@ const morgan = require("morgan");
 const path = require("path");
 require("dotenv").config();
 require("ejs");
-.
+
 const { conectarDB } = require("./database");
 
 conectarDB();
@@ -23,7 +23,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
-// app.use(require("./routes/img.js"));
+app.use(require("./routes/routes.js"));
 
 // Si la petición no coincide con ninguna de las rutas declaradas, mostrar error 404
 app.use((req, res, next) => {
