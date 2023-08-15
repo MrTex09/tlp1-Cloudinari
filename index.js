@@ -7,6 +7,7 @@ const cloudinary = require("cloudinary").v2;
 const PORT = 7000;
 app;
 app.use(express.urlencoded({ extended: true }));
+require("dotenv").config();
 
 const storage = multer.diskStorage({
   destination: "uploads/",
@@ -44,11 +45,10 @@ app.post("/files", upload.single("avatar"), (req, res) => {
 app.get("/nube", (req, res) => {
   res.render("nube", { error: null, success: null });
 });
-
 cloudinary.config({
-  cloud_name: "diqttuxad",
-  api_key: 852866145688219,
-  api_secret: "kh9uplQr4aLbXklD7b7Cicoimwc",
+  cloud_name: process.env.C_NAME,
+  api_key: process.env.C_KEY,
+  api_secret: process.env.C_SECRET,
 });
 
 // Ruta para la subida de archivos
